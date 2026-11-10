@@ -6,3 +6,5 @@
 4. カメラを動かす基本的なプログラムを書いた
 5. .\.venv\Scripts\python.exe .\camera.pyで起動できた。
 6. gitignoreファイルを作成し、.venv/を追加、.venv という名前のフォルダーと、その中身を無視するという意味
+7. 画像保存機能を追加
+8. 保存した画像をgitignoreに追加

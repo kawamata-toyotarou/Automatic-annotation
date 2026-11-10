@@ -12,8 +12,18 @@ try:                                  # ここから先の処理を実行 処理
             raise RuntimeError("カメラから画像を取得できませんでした")
         
         cv2.imshow("Camera", frame)   # Camera という名前のウィンドウに、今読み取った frame を表示
-        if cv2.waitKey(1) == ord("q"):# aitKey(1) でウィンドウの表示更新やキー入力を処理 qで処理を抜ける
+
+        key = cv2.waitKey(1)
+        if key == ord("q"):# aitKey(1) でウィンドウの表示更新やキー入力を処理 qで処理を抜ける
             break
+
+        if key == ord("s"):
+            saved = cv2.imwrite("capture.jpg", frame) #imwriteでframeの画像をcapture.jpgというファイル名で保存
+            if saved:
+                print("ファイルが保存されました")
+            else :
+                print("ファイルが正しく保存されませんでした")
+
 
 finally:                              # tryが終わったら実行される javascritpのエラー時のcatchとは少し違う                      
     camera.release()                  # プログラムが使っていたカメラを解放
