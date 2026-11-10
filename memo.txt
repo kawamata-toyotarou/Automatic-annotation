@@ -1,0 +1,8 @@
+1. py --versionでパイソンのversionを確認し、3.14.10であった。
+2. py -m venv .venvで	Python標準の venv を実行して、今のフォルダーに仮想環境を作った
+   venv とはPythonに標準で付いている、プロジェクト専用の環境を作る機能 たとえば、今回のカメラ開発と別のプロジェクトで違うバージョンのライブラリが必要でも、それぞれの環境で管理できる
+3. .\.venv\Scripts\python.exe -m pip install opencv-pythonで仮想環境のPythonで pip を実行し、OpenCVを入れた。必要な numpy も一緒に入った
+   OpenCVとは画像や映像を扱う処理をまとめたライブラリ
+4. カメラを動かす基本的なプログラムを書いた
+5. .\.venv\Scripts\python.exe .\camera.pyで起動できた。
+6. gitignoreファイルを作成し、.venv/を追加、.venv という名前のフォルダーと、その中身を無視するという意味
