@@ -3,7 +3,7 @@ import cv2                            # openCVを読み込み
 camera = cv2.VideoCapture(0)          # 番号0のカメラを起動
 
 try:                                  # ここから先の処理を実行 処理が終わるときは、途中でエラーが起きた場合も、下の finally に
-    if not camera.isOpened():           # カメラが開けたかを調べる
+    if not camera.isOpened():         # カメラが開けたかを調べる
         raise RuntimeError("カメラが起動できませんでした") # カメラが開けなかったとき、理由が分かるメッセージ付きでエラーを発生
 
     while True:
