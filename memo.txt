@@ -8,3 +8,8 @@
 6. gitignoreファイルを作成し、.venv/を追加、.venv という名前のフォルダーと、その中身を無視するという意味
 7. 画像保存機能を追加
 8. 保存した画像をgitignoreに追加
+9. .\.venv\Scripts\python.exe -m pip install ultralyticsで
+   YOLOという、画像の中に何が、どこに写っているかを見つける物体検知モデルのシリーズを追加
+10.YOLOを用いるプログラムをdetect.pyに追加
+11.実際に人間を検出できたのでgitignoreを編集にpush
+12.画像を保存してからアノテーションからカメラ時にアノテーションに変更
