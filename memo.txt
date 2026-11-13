@@ -35,3 +35,4 @@
 16.data.yamlを作成
 17.train.pyを作成
 18..\.venv\Scripts\python.exe .\train.pyで学習
+19..\.venv\Scripts\python.exe -m pip install pyrealsense2でRealSense用のライブラリを今の .venv に入れた。

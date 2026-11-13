@@ -1,7 +1,8 @@
 import cv2                            # openCVを読み込み
 from ultralytics import YOLO
 
-model = YOLO("yolo26n.pt")
+#model = YOLO("yolo26n.pt")
+model = YOLO("runs/detect/runs/person_smoke_test/weights/best.pt")
 camera = cv2.VideoCapture(0)          # 番号0のカメラを起動(内カメ) 1番は外カメ
 
 try:                                  # ここから先の処理を実行 処理が終わるときは、途中でエラーが起きた場合も、下の finally に
