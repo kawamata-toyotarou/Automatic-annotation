@@ -1,0 +1,6 @@
+# **YAML（ヤムル）**は、設定やデータをテキストで書く形式
+train: images/train # `data.yaml` がある dataset フォルダーを基準に、学習画像を dataset/images/train から読む指定
+val: images/val     # 学習中に検知の結果を確かめる画像の場所
+
+names:
+  0: person         # 0: person は、ラベルの .txt で各行の先頭にあった 0 が「人」を表すという設定`0` の前の半角スペース2つで、`0: person` が names の中にある

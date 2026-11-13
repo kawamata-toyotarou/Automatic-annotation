@@ -2,3 +2,6 @@
 /capture.jpg
 /runs/
 /yolo26n.pt
+/.venv-label/
+/dataset/images/
+/dataset/labels/

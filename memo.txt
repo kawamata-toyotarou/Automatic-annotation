@@ -13,3 +13,25 @@
 10.YOLOを用いるプログラムをdetect.pyに追加
 11.実際に人間を検出できたのでgitignoreを編集にpush
 12.画像を保存してからアノテーションからカメラ時にアノテーションに変更
+13.Python 3.14でLabel Studioをインストールして起動した
+   仮想環境を作成
+   py -m venv .venv-label
+   Label Studioをインストール
+   .\.venv-label\Scripts\python.exe -m pip install --only-binary=numpy label-studio
+   --only-binary=numpy は、NumPyにビルド済みのパッケージを使う指定。
+   この方法で Label Studio 1.23.0 と NumPy 2.5.4 が入った。
+   通常の起動では、依存ライブラリがPython 3.14で削除された
+   pkgutil.find_loader を読み込もうとして ImportError が出た。
+   Python 3.14での起動コマンド
+   .\.venv-label\Scripts\python.exe -c "import pkgutil; from importlib.util import find_spec; pkgutil.find_loader = find_spec; from label_studio.server import main; main()"
+   -c は引用符の中のPythonコードを実行する指定。
+   今回の起動中だけ、依存ライブラリが探す find_loader という名前に
+   find_spec を割り当ててから、main() でLabel Studioを起動した。
+   次回も同じコマンドで起動する。
+
+   PowerShellを開いたまま http://localhost:8080 を開く
+14.label studioを起動。projectを作り,labelを付け、画像付きのYOLOでexport
+15.labell studioのデータをdatasetフォルダーに入れた
+16.data.yamlを作成
+17.train.pyを作成
+18..\.venv\Scripts\python.exe .\train.pyで学習
