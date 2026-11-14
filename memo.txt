@@ -36,3 +36,5 @@
 17.train.pyを作成
 18..\.venv\Scripts\python.exe .\train.pyで学習
 19..\.venv\Scripts\python.exe -m pip install pyrealsense2でRealSense用のライブラリを今の .venv に入れた。
+20.realsense2で画面中央の深度をメートルで表示するプログラムrealsense.pyを作成
+21..\.venv\Scripts\python.exe .\realsensa.py
